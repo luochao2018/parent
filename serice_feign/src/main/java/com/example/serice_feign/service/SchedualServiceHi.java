@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Created by fangzhipeng on 2017/4/6.
  */
 @Service
-@FeignClient(value = "eureka-client")
+@FeignClient(value = "eureka-client",fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
     /**
      * 通过注解的方式调用
