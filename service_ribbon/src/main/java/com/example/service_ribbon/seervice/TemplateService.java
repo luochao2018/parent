@@ -23,7 +23,7 @@ public class TemplateService {
     }
 
     public String hiError(String name) {
-        return "hi," + name + ",sorry,服务器error!";
+        return "service_ribbon: 访问者:" + name + ",服务器error!";
     }
 }
 
