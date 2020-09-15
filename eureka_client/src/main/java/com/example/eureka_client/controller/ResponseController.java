@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestController {
+public class ResponseController {
     @Value("${server.port}")
     String port;
 
     @RequestMapping("hi")
     @ResponseBody
     public String home(@RequestParam String name) {
-        return "端口号:" + port + ", name:" + name;
+        return "当前服务器端口号:" + port + ",  访问者姓名:" + name;
     }
 }
